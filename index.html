@@ -2,466 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="EOPA 2025: 15th International Conference on Earth Observation Tools in Marine Protected Areas and Ocean & Coastal Parks. Online, November 15–16, 2025." />
-  <meta name="keywords" content="EOPA 2025, Earth Observation, Marine Protected Areas, Ocean Parks, SIDS, EO Tools, Call for Papers, Climate Change, Remote Sensing, UNESCO, BOCHER" />
-  <meta name="author" content="BOCHER Startup, UCSIS" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="EOPA 2025 Conference" />
-  <meta property="og:description" content="Application of Earth Observation Tools in Marine Protected Areas and Ocean & Coastal Parks – Online, Nov 15–16, 2025." />
-
-  <meta property="og:url" content="https://yourconferencewebsite.com" />
-  <meta property="og:type" content="website" />
-
-  <title>EOPA 2025 | Application of Earth Observation Tools in marine protected areas and Ocean and Costal Parks</title>
-
-  <!-- Google Fonts: Sophisticated Pairing -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- YouTube IFrame API -->
-  <script src="https://www.youtube.com/iframe_api"></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EOPA 2025 Conference</title>
   <style>
-    :root {
-      --primary: #2d54c4;
-      --primary-dark: #1a2b5c;
-      --bg-light: #f8f9fa;
-      --text-light: #1a2b5c;
-      --bg-dark: #121a2f;
-      --text-dark: #e0e6f5;
-      --card-bg: #ffffff;
-      --card-bg-dark: #1e2740;
-      --border-light: #ddd;
-      --border-dark: #444;
-    }
-
-    [data-theme="dark"] {
-      --bg-light: #121a2f;
-      --text-light: #e0e6f5;
-      --card-bg: #1e2740;
-      --border-light: #444;
-    }
-
     body {
-      font-family: 'Montserrat', sans-serif;
-      line-height: 1.6;
-      color: var(--text-light);
-      background-color: var(--bg-light);
-      transition: background-color 0.3s ease, color 0.3s ease;
-      margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f9f9fb;
     }
-
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', times new roman;
-      color: var(--primary);
-      margin-bottom: 0.8rem;
+    h1, h2, h3 {
+      color: #0056b3;
     }
-
-    .container {
-      max-width: 100%;
-      padding: 0 1rem;
-      margin: 0 auto;
-    }
-
-    /* Header */
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: white;
+    h1 {
+      font-size: 1.8rem;
       text-align: center;
-      padding: 1.5rem 0;
-      position: relative;
-      overflow: hidden;
-  
+      margin-bottom: 10px;
     }
-
-    .event-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin: 1rem 0 0.5rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-
-    .event-subtitle {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-
-    .event-date {
-      margin-top: 1rem;
-      font-size: 1.1rem;
-    }
-
-    /* Dark Mode Toggle */
-    .dark-mode-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: rgba(255,255,255,0.2);
-      border: 1px solid rgba(255,255,255,0.4);
-      color: white;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
+    .subtitle {
+      text-align: center;
       font-size: 1.2rem;
-      transition: 0.3s;
+      color: #555;
+      margin-bottom: 30px;
     }
-
-    .dark-mode-toggle:hover {
-      background: rgba(255,255,255,0.4);
-    }
-
-    /* Section Card */
-    .section-card {
-      background: var(--card-bg);
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      margin: 1rem 0;
-      transition: background-color 0.3s ease;
-    }
-
-    /* Scrollable Commission */
-    .commission {
-      max-height: 300px;
-      overflow-y: auto;
-      padding-right: 0.5rem;
-    }
-
-    .commission::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    .commission::-webkit-scrollbar-thumb {
-      background: var(--primary);
-      border-radius: 3px;
-    }
-
-    .commission ul {
-      list-style: none;
-    }
-
-    .commission li {
-      padding: 0.6rem 0;
-      border-bottom: 1px solid var(--border-light);
-    }
-
-    .commission li:last-child {
-      border-bottom: none;
-    }
-
-    /* Call for Papers */
-    .cfp-section ul {
-      padding-left: 1.2rem;
-      margin: 0.8rem 0;
-    }
-
-    .cfp-section li {
-      margin-bottom: 0.4rem;
-    }
-
-    .download-link {
-      display: inline-block;
-      margin-top: 1rem;
-      color: var(--primary);
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .download-link:hover {
-      text-decoration: underline;
-    }
-
-    /* Video Section */
-    .video-section {
-      text-align: center;
-    }
-
-    .video-container {
-      position: relative;
-      width: 100%;
-      height: 200px;
-      margin: 1rem 0;
-      border-radius: 8px;
-      overflow: hidden;
-      background: #000;
-    }
-
-    .video-placeholder {
-      color: #aaa;
-      font-style: italic;
-    }
-
-    /* Registration Form */
-    .account-form input,
-    .account-form select,
-    .account-form button,
-    .account-form textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin: 0.5rem 0;
-      border: 1px solid var(--border-light);
-      border-radius: 6px;
+    section {
       background: white;
-      color: var(--text-light);
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
-    .account-form button {
-      background: var(--primary);
-      color: white;
-      cursor: pointer;
-      font-weight: 600;
+    ul {
+      padding-left: 20px;
     }
-
-    .account-form button:hover {
-      background: var(--primary-dark);
+    .video-container {
+      margin: 20px 0;
     }
-
-    /* Footer */
+    .video-container video {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+    .download {
+      margin-top: 15px;
+      font-weight: bold;
+    }
     footer {
-      background: var(--primary-dark);
-      color: white;
       text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 2rem;
-    }
-
-    footer .footer-logo {
-      max-width: 120px;
-      margin: 0 auto 1rem;
-      display: block;
-    }
-
-    footer p {
-      margin: 0.5rem 0;
-      font-size: 0.95rem;
-    }
-
-    footer a {
-      color: #b3d9ff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 1rem 0;
-    }
-
-    .social-links a {
-      color: white;
-      font-size: 1.3rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .event-title {
-        font-size: 1.8rem;
-      }
-      .logos img {
-        max-height: 60px;
-      }
-      .video-container {
-        height: 150px;
-      }
+      margin-top: 40px;
+      color: #777;
+      font-size: 0.9rem;
     }
   </style>
 </head>
-<body data-theme="light">
+<body>
 
-  <!-- Header  Dark Mode Toggle -->
-  <header>
-    <div class="dark-mode-toggle" id="darkModeToggle">
-      <i class="fas fa-moon"></i>
-    </div>
-    <h1 class="event-title">EOPA 2025</h1>
-    <p class="event-subtitle">15th International Conference on Earth Observation Tools in Marine Protected Areas and Ocean & Coastal Parks</p>
-    <p class="event-date">Online • November 15–16, 2025</p>
-  </header>
+  <h1>15th International Conference on Earth Observation Tools in Marine Protected Areas and Ocean & Coastal Parks</h1>
+  <p class="subtitle">Online • November 15–16, 2025</p>
 
-    
-  </section>
-
-  <!-- Commission Section -->
-  <section class="section-card">
+  <section>
     <h2>Scientific Committee</h2>
-    <div class="commission">
-      <ul>
-        <li><strong>Dr. Anna Petrova</strong> – Chair, European Climate Pact</li>
-        <li><strong>Prof. James Lee</strong> – Marine Ecology, University of the South Pacific</li>
-        <li><strong>Dr. Maria Santos</strong> – Remote Sensing, UTT</li>
-        <li><strong>Dr. David Kim</strong> – Coastal Management, Fiji National University</li>
-        <li><strong>Ms. Lina Chen</strong> – Policy Advisor, AOSIS</li>
-        <li><strong>Dr. Ahmed Nasser</strong> – Oceanography, Euclid University</li>
-        <li><strong>Prof. Fatima Al-Mansoori</strong> – Environmental Science, IEU Malta</li>
-        <li><strong>Dr. Samuel T. Brown</strong> – Climate Data, BOCHER</li>
-      </ul>
+    <ul>
+      <li><strong>Dr. Anna Petrova</strong> – Chair, European Climate Pact</li>
+      <li><strong>Prof. James Lee</strong> – Marine Ecology, University of the South Pacific</li>
+      <li><strong>Dr. Maria Santos</strong> – Remote Sensing, UTT</li>
+      <li><strong>Dr. David Kim</strong> – Coastal Management, Fiji National University</li>
+      <li><strong>Ms. Lina Chen</strong> – Policy Advisor, AOSIS</li>
+      <li><strong>Dr. Ahmed Nasser</strong> – Oceanography, Euclid University</li>
+      <li><strong>Prof. Fatima Al-Mansoori</strong> – Environmental Science, IEU Malta</li>
+      <li><strong>Dr. Samuel T. Brown</strong> – Climate Data, BOCHER</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Call for Papers</h2>
+    <p>
+      The 15th International Scientific Conference on Earth Observation Tools in Protected Areas aims to build capacity and generate marine data knowledge in Small Island Developing States (SIDS), LDCs, and African countries.
+    </p>
+    <div class="download">
+      📄 <a href="assets/docs/call-for-papers.pdf" target="_blank">Download Call for Papers (PDF)</a>
     </div>
   </section>
 
-  <!-- Call for Papers -->
-  <section class="section-card cfp-section">
-    <h2>Call for Papers</h2>
-    <p>The 15th International Scientific Conference on Earth Observation Tools in Protected Areas aims to build capacity and generate marine data knowledge in Small Island Developing States (SIDS), LDCs, and African countries.</p>
-
-    <h3>Conference Topics</h3>
+  <section>
+    <h2>Conference Topics</h2>
     <ul>
       <li>Monitoring of algal biomass and harmful algal blooms</li>
-      <li>Coastal sediment movements</li>
-      <li>Location of fronts, eddies, and upwelling zones</li>
-      <li>Palaeoecological Research in Ocean Parks</li>
-      <li>MPAs as resources for human health and well-being</li>
-      <li>Endemic species in marine national parks</li>
-      <li>Climate change threats to single-island endemics</li>
-      <li>MPA creation trajectories in SIDS</li>
-      <li>Ecosystem services in biosphere reserves</li>
-      <li>Multi-taxa approaches in ocean ecosystems</li>
+      <li>Ocean surface temperature and climate change impacts</li>
+      <li>Remote sensing for coral reef and mangrove monitoring</li>
+      <li>Coastal erosion and sea level rise assessment</li>
+      <li>AI and machine learning in marine Earth observation</li>
+      <li>Marine Protected Area (MPA) effectiveness evaluation</li>
     </ul>
 
-    <h3>Important Dates</h3>
-    <ul>
-      <li><strong>Oct 1, 2025:</strong> Abstract Submission Deadline</li>
-      <li><strong>Oct 6, 2025:</strong> Abstract Notification</li>
-      <li><strong>Oct 25, 2025:</strong> Poster & Video Submission</li>
-      <li><strong>Oct 31, 2025:</strong> Full Paper Deadline</li>
-    </ul>
-
-    <a href="Call-for-papers-EOPA-2025.pdf" class="download-link" download>
-      <i class="fas fa-download"></i> Download Full Call for Papers (PDF)
-    </a>
-  </section>
-
-  <!-- Video Section -->
-  <section class="section-card video-section">
-    <h2>Featured Videos</h2>
-    <div class="video-container" id="videoPlayer"></div>
-    <p id="videoTitle" class="video-placeholder">EOPA 25</p>
-  </section>
-
-  <!-- Registration Form -->
-  <section class="section-card">
-    <h2>Register for EOPA 2025</h2>
-    <form class="account-form" id="registrationForm">
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Email" required />
-      <input type="text" placeholder="Affiliation / University" required />
-      <select required>
-        <option value="" disabled selected>Participation Type</option>
-        <option value="author">Author (Paper Submission)</option>
-        <option value="listener">Listener</option>
-        <option value="reviewer">Scientific Reviewer</option>
-      </select>
-      <textarea placeholder="Short Bio (Optional)"></textarea>
-      <button type="submit">Register Now</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>Organized by BOCHER Startup in collaboration with UNESCO, UCSIS & partner universities</p>
-    <p>Contact: <a href="mailto:bocher.startup@gmail.com">bocher.startup@gmail.com</a></p>
-    <p>All materials archived at UNESCO, SPIE Digital Library, and EUI Repository</p>
-    <div class="social-links">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
+    <!-- Example Video Embeds -->
+    <div class="video-container">
+      <h3>Example Presentation: Algal Bloom Detection (2024)</h3>
+      <video controls>
+        <source src="assets/videos/algal-bloom-demo.mp4" type="video/mp4">
+        Your browser does not support the video tag. <a href="assets/videos/algal-bloom-demo.mp4">Download video</a>.
+      </video>
     </div>
-    <p>#EOPA2025 #EarthObservation #MPA #SIDS #ClimateAction</p>
+
+    <div class="video-container">
+      <h3>Keynote: EO for Ocean Conservation</h3>
+      <video controls>
+        <source src="assets/videos/keynote-eo-ocean.mp4" type="video/mp4">
+        Your browser does not support the video tag. <a href="assets/videos/keynote-eo-ocean.mp4">Download video</a>.
+      </video>
+    </div>
+  </section>
+
+  <section>
+    <h2>Important Information</h2>
+    <p><strong>Submission Deadline:</strong> September 15, 2025</p>
+    <p><strong>Registration Open:</strong> August 1, 2025</p>
+    <p><strong>Contact:</strong> <a href="mailto:eopa2025@bocher.org">eopa2025@bocher.org</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 EOPA Conference. Hosted with GitHub Pages.
   </footer>
 
-  <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX'); // Replace with your GA4 Measurement ID
-  </script>
-
-  <!-- Dark Mode Toggle -->
-  <script>
-    const toggle = document.getElementById('darkModeToggle');
-    const body = document.body;
-
-    // Check saved preference
-    if (localStorage.getItem('theme') === 'dark') {
-      body.setAttribute('data-theme', 'dark');
-      toggle.innerHTML = '<i class="fas fa-sun"></i>';
-    }
-
-    toggle.addEventListener('click', () => {
-      if (body.getAttribute('data-theme') === 'dark') {
-        body.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        toggle.innerHTML = '<i class="fas fa-moon"></i>';
-      } else {
-        body.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        toggle.innerHTML = '<i class="fas fa-sun"></i>';
-      }
-    });
-  </script>
-
-  <EOPA 2;MP4>
-  <script>
-    let player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('videoPlayer', {
-        height: '100%',
-        width: '100%',
-        videoId: 'dQw4w9WgXcQ', // EOPA 2.mp4
-        playerVars: {
-          autoplay: 0,
-          modestbranding: 1,
-          rel: 0
-        },
-        events: {
-          'onReady': onPlayerReady
-        }
-      });
-    }
-
-    function onPlayerReady(event) {
-      document.getElementById('videoTitle').textContent = "EOPA 2025: Introduction to Earth Observation in MPAs";
-    }
-
-    // Optional: Fetch latest video from a playlist via YouTube Data API
-    // You'd need a backend or Firebase function for secure API key usage
-  </script>
-
-  <!-- Registration Form Submission -->
-  <script>
-    document.getElementById('registrationForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert("Thank you for registering! A confirmation email will be sent shortly.");
-      this.reset();
-    });
-  </script>
-
 </body>
-
 </html>
-
-
-
-
-
-
-
 
 
